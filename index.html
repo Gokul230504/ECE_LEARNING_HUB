@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECE Learning Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .featured-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .section-card {
+            text-align: center;
+            padding: 2rem;
+        }
+        .section-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ECE Learning Hub</h1>
+        <p>From Basic Concepts to Advanced Projects</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Welcome to ECE Learning Hub</h2>
+        <p>Explore our comprehensive resources for Electrical and Computer Engineering students.</p>
+        <div class="featured-sections">
+            <div class="section-card fade-in">
+                <div class="section-icon">📚</div>
+                <h3>Basic Concepts</h3>
+                <p>Start your journey with fundamental ECE principles and theories.</p>
+            </div>
+            <div class="section-card fade-in">
+                <div class="section-icon">🚀</div>
+                <h3>Advanced Topics</h3>
+                <p>Dive deep into complex ECE subjects and cutting-edge technologies.</p>
+            </div>
+            <div class="section-card fade-in">
+                <div class="section-icon">🛠️</div>
+                <h3>Hands-on Projects</h3>
+                <p>Apply your knowledge with practical, real-world projects.</p>
+            </div>
+            <div class="section-card fade-in">
+                <div class="section-icon">💻</div>
+                <h3>Interactive Tutorials</h3>
+                <p>Learn through engaging, interactive lessons and simulations.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 ECE Learning Hub. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.fade-in');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                }, 200 * index);
+            });
+        });
+    </script>
+</body>
+</html>

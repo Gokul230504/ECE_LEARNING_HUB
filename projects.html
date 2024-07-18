@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - ECE Learning Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .project-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ECE Learning Hub</h1>
+        <p>From Basic Concepts to Advanced Projects</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>ECE Projects</h2>
+        <p>Apply your knowledge with hands-on projects in various ECE domains.</p>
+        <div class="project-list">
+            <div class="project-item fade-in">
+                <div class="project-image" style="background-image: url('https://example.com/smart-home.jpg');"></div>
+                <h3>Smart Home Automation</h3>
+                <p>Build a system to control lights, temperature, and security using IoT devices.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project-item fade-in">
+                <div class="project-image" style="background-image: url('https://example.com/signal-processing.jpg');"></div>
+                <h3>Digital Signal Processing</h3>
+                <p>Implement audio filtering and noise reduction algorithms.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project-item fade-in">
+                <div class="project-image" style="background-image: url('https://example.com/fpga.jpg');"></div>
+                <h3>FPGA-based Design</h3>
+                <p>Create a custom digital circuit using VHDL or Verilog.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 ECE Learning Hub. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.fade-in');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                }, 200 * index);
+            });
+        });
+    </script>
+</body>
+</html>
